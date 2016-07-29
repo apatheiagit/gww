@@ -1,0 +1,27 @@
+@basic-font: 16px;
+@font-family: 'Open Sans', sans-serif;
+@font-family-light: 'Open Sans Condensed', sans-serif;
+@font-special: 'Bitter', sans-serif;
+@text-color: #373637;
+@link: #0aaf5f;
+@notebook: ~"(max-height: 800px)";
+@mobile: ~"(max-width: 768px)";
+@tablet: ~"(min-width: 768px) and (max-width: 992px)";
+@mobile_tablet: ~"(max-width: 992px)";
+@medium: ~"(min-width: 992px) and (max-width: 1200px)";
+
+body { font-family: @font-family; font-size: @basic-font; color: @text-color;}
+h1,h2,h3,h4,h6,h6,p,ul,li {margin: 0; padding:0px; }
+
+a{
+	color: @link;
+	transition: color 0.2s ease-in-out;
+	&:hover{
+		color: @link;
+		text-decoration: underline;
+	}
+	&:focus, &:visited{
+		color: @link;
+		text-decoration: none;
+	}
+}
