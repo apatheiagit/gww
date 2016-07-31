@@ -12,6 +12,7 @@
 @gray-text: #878787;
 @gray-text2: #555555;
 @gray-dark: #dcddde;
+@skiey: #83dbff;
 @notebook: ~"(max-height: 800px)";
 @mobile: ~"(max-width: 768px)";
 @tablet: ~"(min-width: 768px) and (max-width: 992px)";
@@ -181,6 +182,11 @@ input, textarea{
 				color: @blue;
 				text-decoration: none;
 			}
+		}
+		&.active-trail{
+			& a{
+				color: @blue;
+			}
 		} 
 	}
 	.footer &{
@@ -302,6 +308,9 @@ input, textarea{
 	}
 	&--gray{
 		background-color: @light-blue;
+	}
+	&--blue{
+		background-color: @blue;
 	}
 }
 .home-block-1{
@@ -500,6 +509,185 @@ input, textarea{
 	& .text{
 		margin-bottom: 20px;
 	}
+}
+.filter-block{
+	& .border-container{
+		border-bottom: none;
+		position: relative;
+		height: 40px;
+	}
+	& .filter-switch{
+		position: absolute;
+		cursor: pointer;
+		top: -14px;
+		left: 50%;
+		margin-left: -14px;
+	}
+	& .container{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+.switcher{
+	background: url(../img/switcher.png) no-repeat center 14px @blue;
+	border-radius: 50%;
+	height: 28px;
+	width: 28px;
+	transition: all 0.5s ease;
+	&.on{
+		-webkit-transform: rotate(180deg);
+		-ms-transform: rotate(180deg); 
+		transform: rotate(180deg);
+		background-position: center 8px;
+	}
+}
+.form-table{
+	border-collapse: collapse;
+	table-layout: fixed;
+	display: table;
+	width: 100%;
+	& .form-row{
+		display: table-row;
+	}
+	& .form-item{
+		color: @skiey;
+		border: 1px solid @skiey;
+		display: table-cell;
+		position: relative;
+		& .form-select{
+			width: 100% !important;
+		}
+		& .btn-default{
+			background-color: transparent;
+			border: none;
+			color: @skiey;
+			font-style: italic;
+			&:focus {
+			    outline: none !important;
+			    outline-offset: 0px;
+			}
+		}
+		& .btn-default:focus, & .btn-default.focus,
+		& .open>.dropdown-toggle.btn-default, & .btn-default:hover,
+		& .form-item-when-value-date input:hover {
+		  	background-color: @blue !important;
+		  	border-color: @blue;
+		  	color: @skiey;
+		}
+		& .caret{ 
+			background: url(../img/ddl.png) no-repeat 0px 0px;
+			border: none;
+			margin-top: -3px !important;
+			height: 10px;
+			width: 18px;
+		}
+		& .dropdown-menu{
+			background-color: @blue !important;
+		  	border-color: @blue;
+		  	border-radius: 0;
+		  	box-shadow: none;
+		  	& li{
+		  		& a{
+		  			color: lighten(@skiey, 10%);
+		  			font-style: italic;
+		  			&:hover{
+		  				color: lighten(@skiey, 10%);
+		  				background-color: lighten(@blue, 5%);
+		  			}
+		  			&:focus {
+					    outline: none !important;
+					    outline-offset: 0px;
+					}
+		  		}
+		  		&.selected{
+					& a{
+		  				background-color: lighten(@blue, 10%);
+		  			}
+		  		}
+		  	}
+		}
+	}
+}
+.article-item{
+	margin-bottom: 30px;
+	.photo-wrap{
+		position: relative;
+		
+		& .photo{
+			border-radius: 3px 3px 0 0;
+			overflow: hidden;
+			position: relative;
+			z-index: 0;
+		}
+		& .title{
+			position: absolute;
+			top: 80px;
+			text-align: center;
+			width: 100%;
+			z-index: 10;
+			& a{
+				color: white;
+				font-size: 20px;
+				font-family: @font-special;
+				font-weight: bold;
+			}
+		}
+		& .logo{
+			background-color: white;
+			border-radius: 50px;
+			position: absolute;
+			bottom: -47px;
+			height: 94px;
+			width: 94px;
+			left: 50%;
+			margin-left: -47px;
+			text-align: center;
+			z-index: 10;
+			vertical-align: middle;
+    		line-height: 94px;
+    		&{
+    			max-width: 94px;
+    		}
+		}
+		& .v-line{
+			top: 0;
+			height: 30px;
+			z-index: 10;
+		}
+	}
+	.content{
+		border-left: 1px solid @gray-fon;
+		border-right: 1px solid @gray-fon;
+		border-bottom: 1px solid @gray-fon;
+		border-radius: 0 0 3px 3px;
+		padding: 50px 23px 35px 23px;
+		position: relative;
+		height: 380px;
+		& .v-line{
+			bottom: 0;
+			height: 14px;
+		}
+		& p{
+			border-bottom: 1px solid @gray-fon;
+			font-size: 14px;
+			padding: 12px 6px;
+		}
+	}
+}
+.blue-container{
+	background-color: @blue;
+}
+.spec-container{
+	@media (min-width: 1230px){
+	   padding-left: 30px;
+	   padding-right: 30px;
+	   width: 1200px;
+	}
+}
+.border-container{
+	border-left: 1px solid @gray-fon;
+	border-right: 1px solid @gray-fon;
+	border-bottom: 1px solid @gray-fon;
 }
 .stitches-icon(@x: 0, @y: 0, @width: 0, @height: 0) {
     background-position: @x @y;
