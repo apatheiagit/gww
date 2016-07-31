@@ -31,6 +31,11 @@ a:visited {
   color: #25aae1;
   text-decoration: none;
 }
+input:focus,
+textarea:focus {
+  outline-offset: 0 !important;
+  outline: none !important;
+}
 .top-header {
   margin: 15px 0;
 }
@@ -143,6 +148,9 @@ a:visited {
 .bttn-blue {
   background-color: #25aae1;
   border-bottom: 3px solid #0c82b3;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   color: white !important;
 }
 .bttn-with-icon {
@@ -154,6 +162,10 @@ a:visited {
 }
 .bttn:hover {
   text-decoration: none;
+  background-color: #52bbe7;
+}
+.bttn:active {
+  border-color: transparent;
 }
 .main-nav li {
   display: inline-block;
@@ -185,6 +197,8 @@ a:visited {
   height: 24px;
   margin-top: -12px;
   width: 100%;
+  z-index: 100;
+  position: relative;
 }
 .footer-content {
   padding-top: 40px;
@@ -228,6 +242,285 @@ a:visited {
 }
 .main-content {
   min-height: 600px;
+}
+.streamer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #25aae1;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  height: 700px;
+}
+@media (max-width: 992px) {
+  .streamer {
+    padding: 50px 0;
+    height: 400px;
+  }
+}
+.streamer .h1-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 60px;
+  line-height: 1.1;
+  margin-left: 20px;
+  max-width: 570px;
+}
+@media (max-width: 992px) {
+  .streamer .h1-title {
+    font-size: 32px;
+    max-width: 370px;
+  }
+}
+.streamer .how-block {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.streamer .how-block a {
+  border: 2px solid white;
+  border-radius: 3px;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in;
+}
+@media (max-width: 992px) {
+  .streamer .how-block a {
+    font-size: 18px;
+  }
+}
+.streamer .how-block a:hover {
+  text-decoration: none;
+  background-color: white;
+  color: #25aae1;
+}
+.streamer .v-line {
+  height: 17px;
+  bottom: 0;
+}
+.v-line {
+  width: 2px;
+  left: 50%;
+  margin-left: -2px;
+  position: absolute;
+}
+.v-line--white {
+  background-color: #ebebeb;
+}
+.v-line--gray {
+  background-color: #718496;
+}
+.home-block-1 {
+  background: url(../img/fon1.png) center;
+}
+.about-announce {
+  position: relative;
+  color: #f1f2f2;
+  padding: 90px 0 85px;
+  text-align: center;
+}
+.about-announce .text {
+  max-width: 770px;
+  margin: 0 auto;
+}
+.about-announce .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 26px;
+  font-weight: bold;
+}
+.about-announce .v-line-1 {
+  top: 0;
+  height: 76px;
+}
+.about-announce .v-line-2 {
+  bottom: 0;
+  height: 70px;
+}
+.h2-title {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: center;
+}
+.h2-title--gray {
+  color: #718496;
+}
+.h2-title--white {
+  color: #f1f2f2;
+}
+.how-work {
+  background-color: #f1f2f2;
+  padding: 50px 0;
+  position: relative;
+}
+.how-work .v-line-1 {
+  top: 0;
+  height: 50px;
+}
+.how-work .v-line-2 {
+  bottom: 0;
+  height: 50px;
+}
+.how-work .how-work-icons {
+  overflow: hidden;
+  padding: 20px;
+}
+.how-work .icon-block {
+  float: left;
+  width: 19%;
+}
+@media (max-width: 992px) {
+  .how-work .icon-block {
+    width: 25%;
+  }
+}
+.how-work .icon-block .icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 140px;
+  width: 100%;
+}
+@media (max-width: 992px) {
+  .how-work .icon-block .icon {
+    background-size: contain;
+    height: 100px;
+  }
+}
+.how-work .icon-block .icon-1 {
+  background-image: url(../img/work1.png);
+}
+.how-work .icon-block .icon-2 {
+  background-image: url(../img/work2.png);
+}
+.how-work .icon-block .icon-3 {
+  background-image: url(../img/work3.png);
+}
+.how-work .icon-block .icon-4 {
+  background-image: url(../img/work4.png);
+}
+.how-work .icon-block .text {
+  color: #555555;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+}
+.how-work .arrow {
+  background: url(../img/arrow-work.png) no-repeat center;
+  height: 120px;
+  float: left;
+  width: 8%;
+}
+@media (max-width: 992px) {
+  .how-work .arrow {
+    display: none;
+  }
+}
+.home-block-2 {
+  background: url(../img/fon2.png) center repeat-x #718496;
+}
+.feedback-block-wrap {
+  background: url(../img/light-tree.png) right bottom no-repeat #25aae1;
+  padding: 75px 70px;
+  position: relative;
+}
+.feedback-block-wrap .v-line-1 {
+  top: 0;
+  height: 25px;
+}
+.feedback-block-wrap .v-line-2 {
+  bottom: 62px;
+  height: 25px;
+}
+.feedback-block-wrap .v-line-3 {
+  bottom: 0;
+  height: 25px;
+}
+.feedback-block-wrap .feedback-block {
+  background: #f1f2f2;
+  padding: 10px 30px 30px 32px;
+}
+.feedback-block-wrap .feedback-block .form-item {
+  border: 2px solid #25aae1;
+  width: 33.33333333%;
+  float: left;
+  margin-top: -2px;
+  margin-right: -2px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .feedback-block-wrap .feedback-block .form-item {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .feedback-block-wrap .feedback-block .form-item {
+    float: none;
+    width: 99.5%;
+  }
+}
+.feedback-block-wrap .feedback-block .form-item input {
+  border: none;
+  background: transparent;
+  color: #718496;
+  padding: 10px 15px;
+  width: 100%;
+}
+.feedback-block-wrap .feedback-block .form-item input:focus {
+  background: #dcddde;
+}
+.feedback-block-wrap .feedback-block .form-item.textarea {
+  float: none;
+  width: 99.5%;
+}
+.feedback-block-wrap .feedback-block .form-item.textarea textarea {
+  border: none;
+  background: transparent;
+  padding: 10px 15px;
+  height: 140px;
+  width: 100%;
+}
+.feedback-block-wrap .feedback-block .form-item.textarea textarea:focus {
+  background: #dcddde;
+}
+.feedback-block-wrap .feedback-block .form-actions {
+  margin: 20px 0 10px;
+  text-align: center;
+}
+.offer-block {
+  color: #f1f2f2;
+  position: relative;
+  padding: 40px 0 50px;
+  text-align: center;
+}
+.offer-block .v-line-1 {
+  top: 0;
+  height: 24px;
+}
+.offer-block .icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 105px;
+  width: 105px;
+  margin: 5px auto;
+}
+.offer-block .icon-1 {
+  background-image: url(../img/offer1.png);
+}
+.offer-block .icon-2 {
+  background-image: url(../img/offer2.png);
+}
+.offer-block .icon-3 {
+  background-image: url(../img/offer3.png);
+}
+.offer-block .title {
+  font-size: 26px;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.2;
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+.offer-block .text {
+  margin-bottom: 20px;
 }
 .icon {
   background-image: url(../img/spritesheet.png);
