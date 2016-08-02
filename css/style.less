@@ -312,6 +312,9 @@ input, textarea{
 	&--blue{
 		background-color: @blue;
 	}
+	&--silver{
+		background-color: @gray-fon;
+	}
 }
 .home-block-1{
 	background: url(../img/fon1.png) center;
@@ -345,6 +348,32 @@ input, textarea{
 	font-weight: bold;
 	margin: 15px 0;
 	text-align: center;
+	&--gray{
+		color: @light-blue;
+	}
+	&--white{
+		color: @gray-fon;
+	}
+}
+.h3-title{
+	font-size: 24px;
+	font-weight: bold;
+	margin: 15px 0;
+	&--gray{
+		color: @light-blue;
+	}
+	&--white{
+		color: @gray-fon;
+	}
+	& small{
+		color: @text-color;
+		text-transform: uppercase;
+	}
+}
+.h4-title{
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px 0;
 	&--gray{
 		color: @light-blue;
 	}
@@ -524,6 +553,7 @@ input, textarea{
 		margin-left: -14px;
 	}
 	& .container{
+		border-radius: 2px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
@@ -634,7 +664,7 @@ input, textarea{
 		}
 		& .logo{
 			background-color: white;
-			border-radius: 50px;
+			border-radius: 50%;
 			position: absolute;
 			bottom: -47px;
 			height: 94px;
@@ -645,7 +675,7 @@ input, textarea{
 			z-index: 10;
 			vertical-align: middle;
     		line-height: 94px;
-    		&{
+    		& img{
     			max-width: 94px;
     		}
 		}
@@ -704,4 +734,273 @@ input, textarea{
     &.icon-search {
         .stitches-icon(-82px, -20px, 19px, 19px);
     }
+    &.icon-academy {
+        .stitches-icon(-143px, -16px, 32px, 28px);
+    }
+    &.icon-dollar {
+        .stitches-icon(-213px, -14px, 33px, 33px);
+    }
+    &.icon-money {
+        .stitches-icon(-285px, -18px, 34px, 24px);
+    }
+}
+.icon-fac {
+    background-image: url(../img/facilities.png);    
+    background-repeat: no-repeat;
+    display: inline-block;
+    &.icon-fac-1 {
+        .stitches-icon(-20px, -20px, 34px, 31px);
+    }
+    &.icon-fac-2 {
+        .stitches-icon(-20px, -91px, 26px, 30px);
+    }
+    &.icon-fac-3 {
+        .stitches-icon(-20px, -161px, 37px, 30px);
+    }
+    &.icon-fac-4 {
+        .stitches-icon(-20px, -231px, 37px, 31px);
+    }
+    &.icon-fac-5 {
+        .stitches-icon(-20px, -302px, 30px, 28px);
+    }
+    &.icon-fac-6 {
+        .stitches-icon(-20px, -370px, 29px, 29px);
+    }
+    &.icon-fac-7 {
+        .stitches-icon(-20px, -439px, 29px, 32px);
+    }
+    &.icon-fac-8 {
+        .stitches-icon(-20px, -511px, 26px, 26px);
+    }
+    &.icon-fac-9 {
+        .stitches-icon(-20px, -577px, 28px, 32px);
+    }
+}
+.aside{
+	float: left;
+	width: 120px;
+}
+.master-content{
+	margin-left: 120px;
+	border-left: 1px solid @gray-fon2;
+	padding-left: 78px;
+	@media @mobile_tablet{
+		padding-left: 20px;
+	}
+}
+.left-nav{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li{
+		font-size: 16px;
+		padding-bottom: 10px;
+		& a{
+			color: @text-color;
+			&.current{
+				color: @blue;
+			}
+		}
+	}
+}
+.detail-page{
+	& .main-photo-wrap{
+		position: relative;
+		& .main-photo{
+			background: rgba(0,0,0,0.2);
+		    height: 100%;
+		    min-height: 260px;
+		    position: relative;
+		    &:after {
+			    content: '';
+			    position: absolute;
+			    top: 0px;
+			    right: 0;
+			    left: 0;
+			    opacity: 1;
+			    height: 100%;
+			    width: 100%;
+			    background: -webkit-linear-gradient(bottom,transparent 50%,rgba(0,0,0,0.5));
+			    background: -o-linear-gradient(bottom,transparent 50%,rgba(0,0,0,0.5));
+			    background: -moz-linear-gradient(bottom,transparent 50%,rgba(0,0,0,0.5));
+			    background: linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.5));
+			    pointer-events: none;
+			    transition: all 0.5s ease-in-out;
+			}
+		}
+		& .main-info{
+			color: white;
+			position: absolute;
+			top: 130px;
+			text-align: center;
+			width: 100%;
+			padding-bottom: 60px;
+			z-index: 10;
+			@media @medium{
+				top: 80px;
+			}
+			@media @mobile_tablet{
+				top: 40px;
+			}
+		}
+		& .logo{
+			background-color: white;
+			border-radius: 50%;			
+			vertical-align: middle;
+			margin: 0 auto;
+    		line-height: 130px;
+    		height: 130px;
+    		width: 130px;
+    		& img{
+    			max-width: 130px;
+    			max-height: 130px;
+    		}
+    		@media @mobile_tablet{
+    			line-height: 90px;
+	    		height: 90px;
+	    		width: 90px;
+	    		& img{
+	    			max-width: 80px;
+	    			max-height: 80px;
+	    		}
+    		}
+		}
+		& .title{		
+			font-size: 46px;
+			font-family: @font-special;
+			font-weight: bold;
+			margin: 30px 0 20px;
+			@media @mobile_tablet{
+				font-size: 30px;
+			}
+		}
+		& .text{
+			font-size: 24px;
+			font-family: @font-special;
+			@media @mobile_tablet{
+				font-size: 18px;
+			}
+		}
+		& .v-line-1{
+			height: 40px;
+			top: 0;
+		}
+		& .v-line-2{
+			height: 40px;
+			bottom: 0px;
+			@media @medium{
+				display:none;
+			}
+		}
+		@media @mobile_tablet{
+			& .v-line{
+				display:none;
+			}
+		}
+	}
+}
+.summery-block{
+	overflow: hidden;
+	padding: 20px 0 26px 20px;
+	position: relative;
+	& .v-line{
+		height: 24px;
+		bottom: 0px;
+	}
+	& .col-summery{
+		float: left;
+		padding-right: 20px;
+		width: 20%;
+		@media @mobile_tablet{
+			border-bottom: 2px solid @gray-fon;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			float: none;
+			width: 100%;
+		}
+		& .title{
+			border-bottom: 1px solid @gray-fon;
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 5px;
+			padding-bottom: 5px;
+			@media @mobile_tablet{
+				border-bottom: 0;
+				margin-bottom: 0px;
+				padding-bottom: 0px;
+			}
+		}
+		& .text{
+			font-size: 14px;
+		}
+	}
+}
+.definition-block{
+	position: relative;
+	padding-bottom: 24px;
+	& .v-line{
+		height: 24px;
+		bottom: 0px;
+	}
+	& .silver-block{
+		padding: 15px 25px 30px;
+	}
+	& p{
+		margin: 15px 0;
+	}
+}
+.silver-block{
+	background-color: @gray-fon;
+}
+.location-block{
+	border-bottom: 1px solid @gray-fon;
+	overflow: hidden;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	& .v-line{
+		height: 20px;
+		bottom: 0px;
+	}
+	& .text{
+		margin-bottom: 30px;
+	}
+	& .full-address{
+		color: @gray-text;
+		& p{
+			margin-bottom: 15px;
+		}
+	}
+	& .col-location{
+		float: left;
+		width: 50%;
+		@media @mobile_tablet{
+			float: none;
+			width: 100%;
+		}
+		&-1{
+			padding-right: 20px;
+		}
+	}
+	& .maps-wrap{
+		border: 3px solid @gray-fon;
+		height: 380px;
+		width: 100%;
+	}
+}
+.facilities-block{
+	border-bottom: 1px solid @gray-fon;
+	overflow: hidden;
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+	& .v-line-1{
+		height: 20px;
+		top: 0px;
+	}
+	& .v-line-2{
+		height: 20px;
+		bottom: 0px;
+	}
 }
