@@ -365,6 +365,9 @@ input, textarea{
 	&--white{
 		color: @gray-fon;
 	}
+	&--blue{
+		color: @blue;
+	}
 	& small{
 		color: @text-color;
 		text-transform: uppercase;
@@ -380,6 +383,13 @@ input, textarea{
 	&--white{
 		color: @gray-fon;
 	}
+}
+.h6{
+	color: @blue;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 5px;
 }
 .how-work{
 	background-color: @gray-fon;
@@ -724,6 +734,9 @@ input, textarea{
     width: @width;
     height: @height;
 }
+.sprite-icon(@x: 0, @y: 0) {
+    background-position: @x @y;
+}
 .icon {
     background-image: url(../img/spritesheet.png);    
     background-repeat: no-repeat;
@@ -735,47 +748,22 @@ input, textarea{
         .stitches-icon(-82px, -20px, 19px, 19px);
     }
     &.icon-academy {
-        .stitches-icon(-143px, -16px, 32px, 28px);
+        .stitches-icon(-139px, -7px, 42px, 42px);
     }
     &.icon-dollar {
-        .stitches-icon(-213px, -14px, 33px, 33px);
+        .stitches-icon(-204px, -6px, 50px, 50px);
+        background-color: @blue;
+        margin-right: 10px;
+    	vertical-align: middle;
     }
     &.icon-money {
-        .stitches-icon(-285px, -18px, 34px, 24px);
+        .stitches-icon(-278px, -5px, 50px, 50px);
+        background-color: @blue;
+        margin-right: 10px;
+    	vertical-align: middle;
     }
 }
-.icon-fac {
-    background-image: url(../img/facilities.png);    
-    background-repeat: no-repeat;
-    display: inline-block;
-    &.icon-fac-1 {
-        .stitches-icon(-20px, -20px, 34px, 31px);
-    }
-    &.icon-fac-2 {
-        .stitches-icon(-20px, -91px, 26px, 30px);
-    }
-    &.icon-fac-3 {
-        .stitches-icon(-20px, -161px, 37px, 30px);
-    }
-    &.icon-fac-4 {
-        .stitches-icon(-20px, -231px, 37px, 31px);
-    }
-    &.icon-fac-5 {
-        .stitches-icon(-20px, -302px, 30px, 28px);
-    }
-    &.icon-fac-6 {
-        .stitches-icon(-20px, -370px, 29px, 29px);
-    }
-    &.icon-fac-7 {
-        .stitches-icon(-20px, -439px, 29px, 32px);
-    }
-    &.icon-fac-8 {
-        .stitches-icon(-20px, -511px, 26px, 26px);
-    }
-    &.icon-fac-9 {
-        .stitches-icon(-20px, -577px, 28px, 32px);
-    }
-}
+
 .aside{
 	float: left;
 	width: 120px;
@@ -795,7 +783,8 @@ input, textarea{
 	& li{
 		font-size: 16px;
 		padding-bottom: 10px;
-		& a{
+		& a, & span{
+			cursor: pointer;
 			color: @text-color;
 			&.current{
 				color: @blue;
@@ -804,6 +793,7 @@ input, textarea{
 	}
 }
 .detail-page{
+	margin-bottom: 60px;
 	& .main-photo-wrap{
 		position: relative;
 		& .main-photo{
@@ -903,7 +893,7 @@ input, textarea{
 	overflow: hidden;
 	padding: 20px 0 26px 20px;
 	position: relative;
-	& .v-line{
+	& .v-line-1{
 		height: 24px;
 		bottom: 0px;
 	}
@@ -938,7 +928,7 @@ input, textarea{
 .definition-block{
 	position: relative;
 	padding-bottom: 24px;
-	& .v-line{
+	& .v-line-1{
 		height: 24px;
 		bottom: 0px;
 	}
@@ -952,13 +942,18 @@ input, textarea{
 .silver-block{
 	background-color: @gray-fon;
 }
-.location-block{
+.blue-block{
+	background-color: @blue;
+}
+.border-bottom-silver{
 	border-bottom: 1px solid @gray-fon;
+}
+.location-block{
 	overflow: hidden;
 	position: relative;
 	padding-top: 20px;
 	padding-bottom: 30px;
-	& .v-line{
+	& .v-line-1{
 		height: 20px;
 		bottom: 0px;
 	}
@@ -988,8 +983,7 @@ input, textarea{
 		width: 100%;
 	}
 }
-.facilities-block{
-	border-bottom: 1px solid @gray-fon;
+.facilities-block{	
 	overflow: hidden;
 	position: relative;
 	padding-top: 20px;
@@ -1002,5 +996,184 @@ input, textarea{
 	& .v-line-2{
 		height: 20px;
 		bottom: 0px;
+	}
+	& .facility{
+		display: inline-block;
+		width: 160px;
+		margin: 10px 10px;
+		& .text{
+			font-size: 14px;
+			text-transform: uppercase;
+			height: 65px;
+			position: relative;
+			& span{
+				position: absolute;
+			    top: 50%;
+			    transform: translateY(-50%);
+			    display: block;
+			    width: 100%;
+			    text-align: center;
+			}
+		}
+	}
+	& .icon-fac {
+	    background-image: url(../img/facilities.png);    
+	    background-repeat: no-repeat;
+	    background-color: @blue;
+	    display: inline-block;
+	    height: 53px;
+	    width: 53px;
+	    margin: 0 auto;
+	    &.icon-fac-1 {
+	        .sprite-icon(-10px, -10px);
+	    }
+	    &.icon-fac-2 {
+	        .sprite-icon(-6px, -81px);
+	    }
+	    &.icon-fac-3 {
+	        .sprite-icon(-11px, -150px);
+	    }
+	    &.icon-fac-4 {
+	        .sprite-icon(-10px, -221px);
+	    }
+	    &.icon-fac-5 {
+	        .sprite-icon(-8px, -290px);
+	    }
+	    &.icon-fac-6 {
+	        .sprite-icon(-7px, -358px);
+	    }
+	    &.icon-fac-7 {
+	        .sprite-icon(-7px, -429px);
+	    }
+	    &.icon-fac-8 {
+	        .sprite-icon(-6px, -498px);
+	    }
+	    &.icon-fac-9 {
+	        .sprite-icon(-7px, -567px);
+	    }
+	}
+}
+.leisure-block{
+	position: relative;
+	padding-top: 20px;
+	& .v-line-1{
+		height: 20px;
+		top: 0px;
+	}
+	& .text{
+		text-align: center;
+		& .title{
+			font-size: 18px;
+			font-weight: bold;
+			margin: 10px 0;
+		}
+	}
+	& .leisure{
+		margin: 20px 0;
+		color: white;
+		font-size: 14px;
+		padding: 10px 15px;
+		text-transform: uppercase;
+		overflow: hidden;
+		& ul{			
+			margin-left: 20px;
+			width: 160px;
+			float: left;
+			& li{
+				padding-bottom: 5px;
+			}
+		}
+	}
+}
+.accommodation-block{
+	padding-bottom: 30px;
+	position: relative;
+	& .v-line-1{
+		height: 20px;
+		bottom: 0px;
+	}
+}
+.enrollment-block{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	& .v-line-1{
+		height: 20px;
+		top: 0px;
+	}
+	& .v-line-2{
+		height: 20px;
+		bottom: 0px;
+	}
+}
+.academicresults-block{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: relative;
+	& .v-line-1{
+		height: 20px;
+		top: 0px;
+	}
+	& .icon-academy{
+		background-color: @gray-fon;
+		border-radius: 50%;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		margin-left: -21px;
+	}
+	& .silver-block{
+		padding: 15px 25px;
+	}
+	& h6{
+		.h6();
+	}
+	& p{
+		padding-bottom: 10px;
+	}
+	& table{
+		table-layout: fixed;
+		width: 100%;
+		& td{
+			padding: 10px;
+			vertical-align: top;
+		}
+	}
+}
+.cost-block{
+	overflow: hidden;
+	padding-bottom: 20px;
+	& .cost-variant{
+		width: 30%;
+		float: left;
+		padding-right: 20px;
+		padding-top: 20px;
+		& h6{
+			.h6();
+		}
+		& hr{
+			border-top: 1px solid @gray-fon;
+			margin: 7px 0;
+		}
+	}
+}
+.expenses-block{
+	overflow: hidden;
+	padding-top: 20px;
+	& ul{
+		margin-left: 20px;
+		margin-top: 20px;
+		width: 30%;
+		padding-right: 20px;
+		float: left;
+		& li{
+			padding-bottom: 5px;
+		}
+	}
+}
+.right-tab{
+	display: none;
+	&.current-tab{
+		display: block;
 	}
 }

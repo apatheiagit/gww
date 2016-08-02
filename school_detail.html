@@ -103,13 +103,13 @@
   <div class="container spec-container border-container">
   	<aside class="aside">
   	<ul class="left-nav">
-  		<li><a href="#description" class="current">Описание</a></li>
-  		<li><a href="#lessons">Предметы</a></li>
-  		<li><a href="#photos">Фото</a></li>
+  		<li><span data-href="#description" class="current">Описание</span></li>
+  		<li><span data-href="#lessons">Предметы</span></li>
+  		<li><span data-href="#photos">Фото</span></li>
   	</ul>
 	</aside>
 	<div class="master-content detail-page">
-		<div class="right-tab" id="description">
+		<div class="right-tab current-tab" id="description">
 			<section class="main-photo-wrap">
 				<div class="main-photo"><img src="img/photo2.jpg" class="img-responsive" alt=""></div>			
 				<div class="v-line v-line--white v-line-1"></div>
@@ -141,7 +141,7 @@
 					<div class="title">Возраст: </div>
 					<div class="text">Возраст от 2-13 лет</div>
 				</div>
-				<div class="v-line v-line--silver"></div>
+				<div class="v-line v-line-1 v-line--silver"></div>
 			</section>
 			<section class="definition-block">
 				<div class="silver-block">
@@ -151,9 +151,9 @@
 					<p>Обучение в подготовительной школе (дети от 8 до 13 лет) включает в себя расширенный спектр дисциплин, в том числе географию, историю, иностранные языки, математику, латынь и греческийи другие.</p>
 					<p>Кроме того, на территории школы для учащихся оборудованы научные лаборатории, творческие мастерские, спортивные площадки, бассейн, музыкальная школа и даже собственный театр. Кроме того, для детей организуются выездные программы, которые проводятся на альпийской вилле, принадлежащей школе.</p>
 				</div>
-				<div class="v-line v-line--silver"></div>
+				<div class="v-line v-line-1 v-line--silver"></div>
 			</section>
-			<section class="location-block">
+			<section class="location-block  border-bottom-silver">
 				<div class="col-location col-location-1">
 					<h3 class="h3-title">Расположение</h3>
 					<div class="text">Расположена школа в деревне Abberly (Эбберли), гравство Вустешир, примерно в трех часах езды от центра Лондона. От эаропорта Хитрой можно добраться за два часа.</div>
@@ -167,18 +167,183 @@
 				<div class="col-location">
 					<div class="maps-wrap"></div>
 				</div>
-				<div class="v-line v-line--silver"></div>
+				<div class="v-line v-line-1 v-line--silver"></div>
 			</section>
-			<section class="facilities-block">
+			<section class="facilities-block border-bottom-silver">
 				<div class="v-line v-line-1 v-line--silver"></div>
 				<h3 class="h3-title">Оснащение школы<br>
 				<small>На территории школы расположены</small></h3>
-				
+				<div class="facility">
+					<div class="icon-fac icon-fac-1"></div>
+					<div class="text"><span>учебные и жилые помещения</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-2"></div>
+					<div class="text"><span>студия изобразительных искусств</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-3"></div>
+					<div class="text"><span>библиотека</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-4"></div>
+					<div class="text"><span>театральная студия</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-5"></div>
+					<div class="text"><span>музыкальные классы</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-6"></div>
+					<div class="text"><span>спортивный комплекс</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-7"></div>
+					<div class="text"><span>бассеин</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-8"></div>
+					<div class="text"><span>теннисные корты</span></div>
+				</div>
+				<div class="facility">
+					<div class="icon-fac icon-fac-9"></div>
+					<div class="text"><span>научные лаборатории</span></div>
+				</div>
 				<div class="v-line v-line-2 v-line--silver"></div>
 			</section>
+			<section class="leisure-block">
+				<div class="text">
+					<div class="v-line v-line-1 v-line--silver"></div>
+					<div class="title">Внеклассные занятия и спорт</div>
+					<p>В школе уделяют огромное внимание не только академическому<br> образованию, но и досугу учеников</p>					
+				</div>
+				<div class="blue-block leisure">
+					<ul>
+						<li>регби</li>
+						<li>хоккей на траве</li>
+						<li>теннис</li>
+					</ul>
+					<ul>
+						<li>крикет</li>
+						<li>плавание</li>
+						<li>скалолазание</li>
+					</ul>
+					<ul>
+						<li>рыбалка</li>
+						<li>бег</li>
+						<li>музыка</li>
+					</ul>
+					<ul>
+						<li>пение</li>
+						<li>театр</li>
+						<li>танцы</li>
+					</ul>
+					<ul>
+						<li>изобразительное исскуство</li>
+						<li>и многое другой</li>
+					</ul>
+				</div>
+			</section>
+			<section class="accommodation-block border-bottom-silver">
+				<h3 class="h3-title">Проживание</h3>
+				<div class="text">
+					Школа предоставляет дневное обучение и пансион. Мальчики и девочик проживают отдельно. При каждом доме постоянно находятся опытные воспитатели
+				</div>
+				<div class="v-line v-line-1 v-line--silver"></div>
+			</section>
+			<section class="enrollment-block border-bottom-silver">
+				<div class="v-line v-line-1 v-line--silver"></div>
+				<h3 class="h3-title">Зачисление. Необходимые документы</h3>
+				<div class="text">
+					Правила поступления в школу зависят от возраста ученика и довольно лояльны для иностранцев. Для получение более детальной информации просим вас обратится в школу или к представителю вашей компании за бесплатной консультацией.
+				</div>
+				<div class="v-line v-line-2 v-line--silver"></div>
+			</section>
+			<section class="academicresults-block">
+				<div class="v-line v-line-1 v-line--silver"></div>
+				<div class="icon icon-academy"></div>
+				<div class="silver-block">
+					<h3 class="h3-title h3-title--blue text-center">Академические результаты предыдущих лет</h3>
+					<table>
+						<tr>
+							<td>
+								<p>Результаты экзаменов 2015 года по данным школы:</p>
+								<h6>A-level:</h6>
+								<p>A*  38%   A   58%      B   84%</p>
+								<p>C   93%   D   100%    E   100%</p>
+							</td>
+							<td>
+								<p>Процент студентов с 3 или большим количеством <br>A-levels: 86% <br>Средний результат по сданным работам: 117</p>
+								<h6>GCSE:</h6>
+								<p>A* 7%       A  27%    B  58%  C  83%     D  96%  </p>
+								<p>E  99%     F  100%  G 100%</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+			<section class="cost-block border-bottom-silver">
+				<h3 class="h3-title"><span class="icon icon-money"></span>Стоимость обучения</h3>
+				<div class="cost-variant">
+					<h6>Prep School:</h6>
+					<p><b>С полным проживанием</b><br>£7,255 / триместр</p>
+					<hr>
+					<p><b>Дневное пребывание: </b><br>£5,780 / триместр для Year 5 и выше;<br>£5,455 / триместр для Year 4;<br>£3,430/ триместр для Year 3.</p>
+					<hr>
+					<p><b>С частичным проживанием: </b><br>стоимость дневного пребывания + £525 за 2 ночи в неделю и £788 за 3 ночи в неделю.</p>
+				</div>
+				<div class="cost-variant">
+					<h6>Pre-Prep & Nursery:</h6>
+					<p>Nursery (ясли) </p>
+					<p><b>Полдня</b> -  £1,695 / триместр (средняя цена, окончательная будет зависеть от общего количества занятий);</p>
+					<hr>
+					<p><b>Целый день</b> - £2,395 / триместр (средняя цена, окончательная будет зависеть от общего количества занятий).</p>
+				</div>
+				<div class="cost-variant">
+					<h6>Pre-Prep School:</h6>
+					<p><b>Class R</b>  — £2,715  / триместр (средняя цена, окончательная будет зависеть от общего количества занятий);</p>
+					<hr>
+					<p><b>Class 1</b> — £2,715 / триместр</p>
+				</div>
+			</section>
+			<section class="expenses-block">
+				<h3 class="h3-title"><span class="icon icon-dollar"></span>Дополнительные расходы</h3>
+				<ul>					
+					<li>Виза</li>
+					<li>Медицинская страховка</li>
+					<li>Депозит подтверждения места в школе</li>
+				</ul>
+				<ul>					
+					<li>Семестровый депозит </li>
+					<li>Дополнительные занятия, экскурсии и другие мероприятия</li>
+					<li>Трансфер из аэропорта</li>
+				</ul>
+				<ul>					
+					<li>Опекун (если необходим)</li>
+				</ul>
+			</section>
 		</div>
-		<div class="right-tab" id="lessons"></div>
-		<div class="right-tab" id="photos"></div>
+		<div class="right-tab" id="lessons">
+			<section class="expenses-block">
+				<h3 class="h3-title"><span class="icon icon-dollar"></span>Дополнительные расходы</h3>
+				<ul>					
+					<li>Виза</li>
+					<li>Медицинская страховка</li>
+					<li>Депозит подтверждения места в школе</li>
+				</ul>
+				<ul>					
+					<li>Семестровый депозит </li>
+					<li>Дополнительные занятия, экскурсии и другие мероприятия</li>
+					<li>Трансфер из аэропорта</li>
+				</ul>
+				<ul>					
+					<li>Опекун (если необходим)</li>
+				</ul>
+			</section>
+		</div>
+		<div class="right-tab" id="photos">
+			<img src="img/photo2.jpg" class="img-responsive" alt="">
+		</div>
 
 	</div>
   </div>
